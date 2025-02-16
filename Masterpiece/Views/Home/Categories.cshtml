@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleIndex.css">
+    <title>Product Page with Filters</title>
+    <link rel="stylesheet" href="~/css/categoriesStyle.css" />
+    <link rel="stylesheet" href="~/css/styleIndex.css"/>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+
+ 
+
+    <section class="display flex align-2">
+
+        <h1 class="lato text-white d-head">Super Electronics</h1>
+        <h3 class="catamaran text-white mt-3 d-body">Best gadets, best value, excellent service</h3>
+        <div class="inputcont text-center mt-4">
+            <select class="select input-item" name="select">
+                <option value="Desktop">Desktops</option>
+                <option value="Laptops">Laptops</option>
+                <option value="Smartphones">Smartphones</option>
+                <option value="smartwatches">Smartwatches</option>
+                <option value="others">Other Products</option>
+            </select>
+            <input type="text" placeholder="What do you search for?" class="lato input-item mt-2">
+            <a href="Search.html" class="searchbtn eclipse-bg text-white px-3 py-2">Search</a>
+        </div>
+    </section>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Filters</h3>
+            <hr>
+
+            <!-- Filter Header -->
+            <div class="filter-header">
+                <h4>Filters</h4>
+                <button class="clear-filters">Clear All</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-section">
+                <h4>Category</h4>
+                <label><input type="checkbox" value="Custom PCs"> Custom PCs</label>
+                <label><input type="checkbox" value="MSI All-in-One PCs"> MSI All-in-One PCs</label>
+                <label><input type="checkbox" value="HP/Compaq PCs"> HP/Compaq PCs</label>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-section">
+                <h4>Price</h4>
+                <label><input type="checkbox" value="JD200 - JD350"> JD200 - JD350</label>
+                <label><input type="checkbox" value="JD350 - JD499"> JD350 - JD499</label>
+                <label><input type="checkbox" value="JD500 - JD750"> JD500 - JD750</label>
+            </div>
+
+            <!-- Color Filter -->
+            <div class="filter-section">
+                <h4>Color</h4>
+                <div class="color-options">
+                    <div class="color-red" data-color="red"></div>
+                    <div class="color-black" data-color="black"></div>
+                </div>
+            </div>
+
+            <!-- Brands Filter -->
+            <div class="filter-section">
+                <h4>Brands</h4>
+                <label><input type="checkbox" value="MSI"> MSI</label>
+                <label><input type="checkbox" value="Gigabyte"> Gigabyte</label>
+                <label><input type="checkbox" value="Adata"> Adata</label>
+            </div>
+
+            <button class="apply-filters-btn">Apply Filters</button>
+        </div>
+
+        <!-- Products -->
+        <div class="products">
+            <!-- Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/big-display.jpg" alt="Product Image">
+                <h4>MSI Pro 16 Flex</h4>
+                <p>EX DISPLAY - MULTITOUCH</p>
+                <div class="reviews">★★★★★ (4 Reviews)</div>
+                <div class="price">$499.00</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat Product Card -->
+            <div class="product-card">
+                <img src="images/big-display.jpg">
+                <div class="details">
+                    <h4>MSI Pro 16 Flex</h4>
+                    <p>EX DISPLAY - MULTITOUCH</p>
+                    <div class="reviews">★★★★★ (4 Reviews)</div>
+                    <div class="price">$499.00</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <div class="pagination-container">
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </div>
+    <br>
+    <div id="footer-container"></div>
+    <script>
+        // Load footer using JavaScript
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+          });
+    </script>
+
+
+</body>
+</html>

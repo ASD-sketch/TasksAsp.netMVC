@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="~/css/styleIndex.css" />
+    <link rel="stylesheet" href="~/css/StyleFooter.css" />
+    <link rel="stylesheet" href="~/css/NavbarStyle.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Masterpiece</title>
+  
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo"><img width="200px" height="100px" src="./images/logo7.png" alt=""></div>
+
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="questionUser.html">Select your pc</a></li>
+            <li><a href="SIgnIn-SignUp.html">Sign-In</a></li>
+            <li><a href="SIgnIn-SignUp.html">Sign-Up</a></li>
+
+        </ul>
+
+
+        <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <a href="cartPage.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </a>
+
+            <a href="profile.html">
+                <img src="https://via.placeholder.com/40" alt="" class="profile-img">
+            </a>
+        </div>
+
+
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <script>
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+          menu.classList.toggle('active');
+        });
+    </script>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Newsletter Section -->
+        <div class="newsletter">
+            <h2>Sign Up To Our Newsletter.</h2>
+            <p>Be the first to hear about the latest offers.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <!-- Information Section -->
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Orders and Returns</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Newsletter Subscription</a></li>
+                </ul>
+            </div>
+
+            <!-- PC Parts Section -->
+            <div class="footer-section">
+                <h4>PC Parts</h4>
+                <ul>
+                    <li><a href="#">CPUs</a></li>
+                    <li><a href="#">Hard Drives (Internal)</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Keyboards / Mice</a></li>
+                    <li><a href="#">Cases / Power Supplies / Cooling</a></li>
+                    <li><a href="#">RAM (Memory)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                </ul>
+            </div>
+
+            <!-- Desktop PCs Section -->
+            <div class="footer-section">
+                <h4>Desktop PCs</h4>
+                <ul>
+                    <li><a href="#">Custom PCs</a></li>
+                    <li><a href="#">MSI All-In-One PCs</a></li>
+                    <li><a href="#">HP/Compaq PCs</a></li>
+                    <li><a href="#">ASUS PCs</a></li>
+                    <li><a href="#">Tecs PCs</a></li>
+                </ul>
+            </div>
+
+            <!-- Laptops Section -->
+            <div class="footer-section">
+                <h4>Laptops</h4>
+                <ul>
+                    <li><a href="#">Everyday Use Notebooks</a></li>
+                    <li><a href="#">MSI Workstation Series</a></li>
+                    <li><a href="#">MSI Prestige Series</a></li>
+                    <li><a href="#">Netbooks</a></li>
+                    <li><a href="#">Infinity Gaming Notebooks</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>Phones: (+962) 0797030415</p>
+                <p>Email: <a href="mailto:shop@email.com">shop@email.com</a></p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="payment-icons">
+                <img src="paypal.png" alt="PayPal">
+                <img src="visa.png" alt="Visa">
+                <img src="mastercard.png" alt="MasterCard">
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Social Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
