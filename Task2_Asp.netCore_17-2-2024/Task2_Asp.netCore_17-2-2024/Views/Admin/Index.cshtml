@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Users List";
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@{
+
+
+    var users = new List<(string Name, double Age, string Email)>
+{
+    ("Abdallah",28,"Abdallah@gmail.com"),
+    ( "sura", 29,"sura@gmail.com"),
+    ("salah", 30,"salah@gmail.com")
+};
+
+}
+
+
+
+<div class="content">
+    <h1>Users List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                <td>@user.Name</td>
+                <td>@user.Age</td>
+                <td>@user.Email</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

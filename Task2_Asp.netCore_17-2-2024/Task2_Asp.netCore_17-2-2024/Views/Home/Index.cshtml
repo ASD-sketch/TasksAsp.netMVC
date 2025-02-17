@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@{
+    var rooms = new List<(string Name, double Price, string ImageUrl)>
+{
+    ("Apartment with Amazing Park View", 45.00, "/images/img1.png"),
+    ("Double Deluxe Room - Double Bed", 35.00, "/images/img2.png"),
+    ("Luxury Apartment - Ground Floor", 40.00, "/images/img3.png")
+};
+}
+
+<div class="container">
+
+    @foreach (var room in rooms)
+    {
+
+    <div class="card">
+        <img src="@room.ImageUrl" alt="Room Image">
+        <h3>@room.Name</h3>
+        <p class="price">$@room.Price</p>
+        <a href="#" class="view-button">VIEW</a>
+    </div>
+   
+    
+    }
+</div>
