@@ -1,9 +1,11 @@
 ﻿
 @{
     ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <style>
-   
+
 
     .profile-container {
         background: #fff;
@@ -49,12 +51,8 @@
             background: #005bb5;
         }
 </style>
-@* <h1>Profile</h1> *@
-@* <h2> @ViewBag.UserName</h2> *@
-@* <h2> @ViewBag.Password</h2> *@
 
-
-
+<h1>Profile</h1>
 <div class="profile-container">
     <h1>Profile</h1>
 
@@ -65,46 +63,6 @@
     <div class="profile-info">
         <p><span>Password:</span> @ViewBag.Password</p>
     </div>
-
-    <p>User Data in Cookies</p>
-    <div class="profile-info">
-        <p><span>Username:</span> @ViewBag.UserName1</p>
-    </div>
-    <div class="profile-info">
-        <p><span>Password:</span> @ViewBag.Password1</p>
-    </div>
-</div>
-
-<br />
-<br />
-
-<div class="profile-container">
-    <h1>Edit Profile</h1>
-
-    <div class="profile-info">
-        <p><span>Username:</span> @ViewBag.UserName1</p>
-    </div>
-    <div class="profile-info">
-        <p><span>Password:</span> @ViewBag.Password1</p>
-    </div>
-
-
-    <form method="post" action="/User/Edit">
-        <div class="input-group">
-            <i>👤</i>
-            <input type="text" name="username" placeholder="Username" required />
-        </div>
-
-        <div class="input-group">
-            <i>🔒</i>
-            <input type="password" name="password" placeholder="Password" required />
-        </div>
-
-        <button type="submit" class="btn-register">Edit</button>
-    </form>
-
-
-
 
 </div>
 

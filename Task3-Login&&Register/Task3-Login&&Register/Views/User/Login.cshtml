@@ -1,24 +1,11 @@
 ﻿
 @{
     ViewData["Title"] = "Login";
-    Layout = null;
+    // Layout = null;
 }
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: white;
-    }
+ 
 
     .login-container {
         background: #fff;
@@ -126,6 +113,7 @@
         </div>
 
         <button type="submit" class="btn-login">Login</button>
+       <label>Remember me</label> <input type="checkbox" name="remember" />
     </form>
 
     @if (ViewBag.Error != null)

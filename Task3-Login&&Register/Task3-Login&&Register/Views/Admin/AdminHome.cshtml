@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "AdminHome";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var userName = Context.Session.GetString("UserName");
+
+}
+
+
+
+<h2>Welcome, @userName</h2>
+
