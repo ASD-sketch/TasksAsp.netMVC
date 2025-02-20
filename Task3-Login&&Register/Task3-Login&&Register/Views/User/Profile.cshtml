@@ -2,8 +2,81 @@
 @{
     ViewData["Title"] = "Profile";
 }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-<h1>Profile</h1>
-<h2> @ViewBag.UserName</h2>
-<h2> @ViewBag.Password</h2>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color:white;
+    }
+
+    .profile-container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .profile-info {
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #f7f7f7;
+        border-radius: 5px;
+        font-size: 18px;
+        color: #555;
+    }
+
+        .profile-info span {
+            font-weight: bold;
+            color: #0072ff;
+        }
+
+    .logout-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #0072ff;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+        .logout-btn:hover {
+            background: #005bb5;
+        }
+</style>
+@* <h1>Profile</h1> *@
+@* <h2> @ViewBag.UserName</h2> *@
+@* <h2> @ViewBag.Password</h2> *@
+
+
+
+<div class="profile-container">
+    <h1>Profile</h1>
+    <div class="profile-info">
+        <p><span>Username:</span> @ViewBag.UserName</p>
+    </div>
+    <div class="profile-info">
+        <p><span>Password:</span> @ViewBag.Password</p>
+    </div>
+
+    <a href="/User/Logout" class="logout-btn">Logout</a>
+</div>
 

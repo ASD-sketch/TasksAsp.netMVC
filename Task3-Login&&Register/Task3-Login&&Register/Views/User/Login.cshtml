@@ -4,15 +4,134 @@
     Layout = null;
 }
 
-<h1>Login</h1>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-<form method="post" action="/User/Login">
-    <input type="text" name="username" placeholder="Username" required />
-    <input type="password" name="password" placeholder="Password" required />
-    <button type="submit">Login</button>
-</form>
-@if (ViewBag.Error != null)
-{
-    <p style="color:red">@ViewBag.Error</p>
-}
-<a asp-controller="User" asp-action="Register">Go to register</a>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .login-container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            padding-left: 40px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+            .input-group input:focus {
+                border-color: #2575fc;
+            }
+
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+    .btn-login {
+        width: 100%;
+        padding: 12px;
+        background: #2575fc;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+        .btn-login:hover {
+            background: #1a5cc4;
+        }
+
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+
+    .register-link {
+        display: block;
+        margin-top: 15px;
+        color: #2575fc;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+@* <h1>Login</h1> *@
+
+@* <form method="post" action="/User/Login"> *@
+@*     <input type="text" name="username" placeholder="Username" required /> *@
+@*     <input type="password" name="password" placeholder="Password" required /> *@
+@*     <button type="submit">Login</button> *@
+@* </form> *@
+@* @if (ViewBag.Error != null) *@
+@* { *@
+@*     <p style="color:red">@ViewBag.Error</p> *@
+@* } *@
+@* <a asp-controller="User" asp-action="Register">Go to register</a> *@
+
+
+
+
+
+<div class="login-container">
+    <h1>Login</h1>
+    <form method="post" action="/User/Login">
+        <div class="input-group">
+            <i>👤</i>
+            <input type="text" name="username" placeholder="Username" required />
+        </div>
+
+        <div class="input-group">
+            <i>🔒</i>
+            <input type="password" name="password" placeholder="Password" required />
+        </div>
+
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+        <p class="error-message">@ViewBag.Error</p>
+    }
+
+    <a class="register-link" asp-controller="User" asp-action="Register">Go to register</a>
+</div>
