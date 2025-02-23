@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@model List<Department>
+
+<h2>Users List</h2>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Add New Department</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Manager</th>
+        <th>Location</th>
+        <th>StaffCount</th>
+    </tr>
+    @foreach (var dept in Model)
+    {
+        <tr>
+            <td>@dept.DeptName</td>
+            <td>@dept.Manager</td>
+            <td>@dept.Location</td>
+            <td>@dept.StaffCount</td>
+        </tr>
+    }
+</table>

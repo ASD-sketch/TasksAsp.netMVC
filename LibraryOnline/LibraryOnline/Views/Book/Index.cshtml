@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "قائمة الكتب";
+}
+
+<div class="container">
+    <h1 class="text-center my-4">@ViewData["Title"]</h1>
+
+   
+    <div class="list-group">
+        @foreach (var book in ViewBag.Books)
+        {
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>@book</span>
+                <a asp-action="DeleteBook" asp-route-id="@ViewBag.Books.IndexOf(book)" class="btn btn-danger btn-sm">حذف</a>
+            </div>
+        }
+    </div>
+
+    
+    
+    <form asp-action="AddBook" method="post" class="mt-4">
+        <div class="input-group">
+            <input type="text" name="bookTitle" class="form-control" placeholder="أدخل عنوان الكتاب" required />
+            <button type="submit" class="btn btn-primary">إضافة كتاب</button>
+        </div>
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="text-danger mt-2">@ViewBag.ErrorMessage</div>
+        }
+    </form>
+
+   
+    
+</div>
