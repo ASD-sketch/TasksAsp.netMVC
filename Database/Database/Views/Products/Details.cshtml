@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+@model Product
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <img src="@Model.Image" class="card-img-top" alt="@Model.Name" style="height: 400px; object-fit: cover;">
+        <div class="card-body">
+            <h2 class="card-title">@Model.Name</h2>
+            <p class="card-text"><strong>Description:</strong> @Model.Description</p>
+            <p class="card-text"><strong>Price:</strong> <span class="text-success">$@Model.Price</span></p>
+            <div class="d-flex justify-content-between">
+                <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

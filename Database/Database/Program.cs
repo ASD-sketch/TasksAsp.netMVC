@@ -14,6 +14,10 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 builder.Services.AddDbContext<NewDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
 
+
+builder.Services.AddDbContext<MyDbContextProduct>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
+
 var app = builder.Build();
 
 

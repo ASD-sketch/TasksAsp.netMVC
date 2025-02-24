@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<a href="@Url.Action("Create")" class="btn btn-success">Add New Product</a>
+@model List<Product>
+
+
+@{
+    ViewData["Title"] = "Products Page";
+}
+
+<h2 class="text-center">Products Page</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="@product.Image" class="card-img-top" alt="@product.Name" style="height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <p><strong>Price: </strong> <span class="text-success">$@product.Price</span></p>
+                        <div class="d-flex justify-content-between">
+                            <a href="@Url.Action("Details", new { id = product.Id})" class="btn btn-primary">View Details</a>
+                            <a href="@Url.Action("Edit", new { id = product.Id })" class="btn btn-warning text-white">Edit</a>
+                            <a href="@Url.Action("Delete", new { id = product.Id })" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
