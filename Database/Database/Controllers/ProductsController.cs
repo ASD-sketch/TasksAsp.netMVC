@@ -1,5 +1,6 @@
 ﻿using Database.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace Database.Controllers
 {
@@ -14,6 +15,7 @@ namespace Database.Controllers
 
         public IActionResult Index()
         {
+
             var products = _context.Products.ToList();
             return View(products);
         }
@@ -67,6 +69,7 @@ namespace Database.Controllers
             return View(product);
         }
 
+      
 
 
     }

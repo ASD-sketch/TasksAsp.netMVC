@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+@model List<User>
+
+<h2 class="text-center">Admin Dashboard</h2>
+
+
+<div class="mb-3">
+    @* <a href="@Url.Action("Products", "Admin")" class="btn btn-primary">Manage Products</a> *@
+</div>
+
+
+<h3>Manage Users</h3>
+@* <a href="@Url.Action("Users", "Admin")" class="btn btn-success mb-3">View All Users</a> *@
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+                <td>
+                  
+                    <a href="@Url.Action("DeleteUser", "Admin", new { id = user.Id })" class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<h3>Manage Products</h3>
+<a href="@Url.Action("AddProduct", "Admin")" class="btn btn-success mb-3">Add New Product</a>
+@* <a href="@Url.Action("Products", "Admin")" class="btn btn-info mb-3">View All Products</a> *@
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in ViewBag.Products as List<Product>)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>$@product.Price</td>
+                <td><img src="@product.ImageUrl" width="100" /></td>
+                <td>
+                  
+                    <a href="@Url.Action("EditProduct", "Admin", new { id = product.Id })" class="btn btn-warning">Edit</a>
+
+                   
+                    <a href="@Url.Action("DeleteProduct", "Admin", new { id = product.Id })" class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

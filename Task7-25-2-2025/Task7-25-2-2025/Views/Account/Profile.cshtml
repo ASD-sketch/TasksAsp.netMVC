@@ -1,0 +1,31 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = " Profile";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white text-center">
+                    <h3>Profile</h3>
+                </div>
+                <div class="card-body">
+                   
+                    <h4 class="text-center">@Model.Name</h4>
+                    <p class="text-muted text-center">@Model.Email</p>
+
+                    <hr>
+
+                    <p><strong>Role:</strong> <span class="badge bg-primary">@Model.Role</span></p>
+                  
+
+                    <div class="text-center mt-3">
+                        <a href="@Url.Action("EditProfile", "Account")" class="btn btn-warning">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
