@@ -48,13 +48,7 @@ namespace Task7_25_2_2025.Controllers
         }
 
        
-        //public IActionResult Products()
-        //{
-           
-        //    var products = _context.Products.ToList();
-        //    return View(products);
-        //}
-
+     
       
         public IActionResult AddProduct()
         {
