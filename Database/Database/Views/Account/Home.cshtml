@@ -1,0 +1,7 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Welcome, @ViewBag.UserName</h2>
+<a href="@Url.Action("Login")" onclick=" HttpContext.Session.Clear();" class="btn btn-secondary">Logout</a>

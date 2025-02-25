@@ -44,37 +44,48 @@ namespace ConsoleApp1
 
             //--------------------------------------------------------------------------------
 
-            int num1 = int.Parse(Console.ReadLine());
-            int num2 = int.Parse(Console.ReadLine());
-            int num3 = int.Parse(Console.ReadLine());
+            //int num1 = int.Parse(Console.ReadLine());
+            //int num2 = int.Parse(Console.ReadLine());
+            //int num3 = int.Parse(Console.ReadLine());
 
-            bool num11 = false,
-                num22 = false,
-                num33 = false;
+            //bool num11 = false,
+            //    num22 = false,
+            //    num33 = false;
 
-            if (num1 % num2 == 0 && num1 % num3 == 0)
-            {
-                num11 = true;
-            }
+            //if (num1 % num2 == 0 && num1 % num3 == 0)
+            //{
+            //    num11 = true;
+            //}
 
-            if (num2 % num1 == 0 && num2 % num3 == 0)
-            {
-                num22 = true;
-            }
+            //if (num2 % num1 == 0 && num2 % num3 == 0)
+            //{
+            //    num22 = true;
+            //}
 
-            if (num3 % num1 == 0 && num3 % num2 == 0)
-            {
-                num33 = true;
-            }
+            //if (num3 % num1 == 0 && num3 % num2 == 0)
+            //{
+            //    num33 = true;
+            //}
 
-            if (num11 && num22 && num33)
-            {
-                Console.WriteLine("Divide");
-            }
-            else
-            {
-                Console.WriteLine("Not Divide");
-            }
+            //if (num11 && num22 && num33)
+            //{
+            //    Console.WriteLine("Divide");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Divide");
+            //}
+
+
+
+            //String word = Console.ReadLine();
+            //int conut = 1;
+            //for (int i=0;i<word.Length;i++)
+            //{
+               
+            //    Console.Write(word[word.Length-conut++]+" ");
+                
+            //}
 
 
 

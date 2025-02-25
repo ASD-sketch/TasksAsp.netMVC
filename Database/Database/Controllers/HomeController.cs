@@ -28,7 +28,7 @@ namespace Database.Controllers
             return View();
         }
 
-        [HttpPost]
+        
         public IActionResult Create(User user)
         {
             if (ModelState.IsValid)
@@ -42,7 +42,15 @@ namespace Database.Controllers
 
 
 
-     
+        [HttpPost]
+        public IActionResult Search(String s) 
+        {
+            var ser = _context.Users.Find(s);
+            return View(ser);
+        }
+
+
+
 
 
 
