@@ -44,7 +44,7 @@ namespace Task7_25_2_2025.Controllers
                 _context.Users.Remove(user);
                 _context.SaveChanges();
             }
-            return RedirectToAction("Users");
+            return RedirectToAction("Dashboard");
         }
 
        
@@ -107,6 +107,48 @@ namespace Task7_25_2_2025.Controllers
             }
             return RedirectToAction("Dashboard");
         }
+
+
+
+        public IActionResult EditUser(int id)
+        {
+            if (HttpContext.Session.GetString("UserRole") != "Admin") return RedirectToAction("Login", "Account");
+
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+
+            return View(user);
+        }
+
+
+        [HttpPost]
+        public IActionResult EditUser(User updatedUser)
+        {
+            if (HttpContext.Session.GetString("UserRole") != "Admin") return RedirectToAction("Login", "Account");
+
+            var existingUser = _context.Users.FirstOrDefault(u => u.Id == updatedUser.Id);
+            if (existingUser == null) return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                existingUser.Name = updatedUser.Name;
+                existingUser.Email = updatedUser.Email;
+                existingUser.Role = updatedUser.Role; 
+
+              
+                if (!string.IsNullOrEmpty(updatedUser.Password))
+                {
+                    existingUser.Password = updatedUser.Password;
+                }
+
+                _context.Users.Update(existingUser);
+                _context.SaveChanges();
+
+                return RedirectToAction("Dashboard");
+            }
+            return View(updatedUser);
+        }
+
 
 
 

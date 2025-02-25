@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+<h1>EditUser</h1>
+
+@model User
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white text-center">
+                    <h3>Edit User</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="EditUser" method="post">
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="form-group mb-3">
+                            <label>Full Name</label>
+                            <input asp-for="Name" class="form-control" required />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input asp-for="Email" type="email" class="form-control" required />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>New Password (Optional)</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Leave blank to keep existing password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Role</label>
+                            <select asp-for="Role" class="form-control">
+                                <option value="User">User</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                            <span asp-validation-for="Role" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
